@@ -5,36 +5,31 @@ import Label from './Label.jsx';
 
 const LoginForm = props => {
   return (
-    <div>
-      <div className='row'>
-        <Label labelText='Email' />
+    <form class="form-horizontal">
+      <div class="form-group">
+        <Label labelText='Email Address:' />
         <Input
           inputType='text'
           name='email'
           onChange={ props.handleOnChange }
         />
       </div>
-
-      <div className='row'>
-        <Label labelText='Password' />
+      <div class="form-group">
+        <Label labelText='Password:' />
         <Input
           inputType='password'
           name='password'
           onChange={ props.handleOnChange }
         />
       </div>
-
-      <div className='row'>
+      <div class="form-group">
         <Button
           buttonText='Submit'
           isSubmitted={true}
           onSubmit={ props.handleOnSubmit }
         />
-        <Button
-          buttonText='Cancel'
-        />
       </div>
-    </div>
+    </form>
   )
 }
 
